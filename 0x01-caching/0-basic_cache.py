@@ -14,10 +14,10 @@ class BasicCache(BaseCaching):
     """
 
     def __init__(self):
-         """
+        """
         Initialize class using parents __init__ method
         """
-        super().__init__()
+        BaseCaching.__init__(self)
 
     def put(self, key, item):
         """
@@ -31,18 +31,11 @@ class BasicCache(BaseCaching):
         else:
             self.cache_data[key] = item
 
-
     def get(self, key):
         """
         Return value linked to key.
         If key is None or doesn't exist, return None
         """
-        if None in (key, self.cache_data.get(key)):
-            pass
-        else:
-            return self.cache_data.get(key)
-
-
-
-
-
+        if key is not None and key in self.cache_data.keys():
+            return self.cache_data[key]
+        return None
