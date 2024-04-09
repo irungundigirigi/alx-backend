@@ -32,6 +32,6 @@ class LIFOCache(BaseCaching):
         """
         Return the value linked to a given key, or None
         """
-        if key is None and key in self.cache_data.keys():
+        if key is None and key in self.cache_data:
             return self.cache_data[key]
         return None

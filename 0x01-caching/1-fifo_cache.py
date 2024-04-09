@@ -2,6 +2,7 @@
 
 """
 module: 1-fifo_cache.py
+compactible with python >3.7 where dict keeps order of insertion
 """
 from base_caching import BaseCaching
 
