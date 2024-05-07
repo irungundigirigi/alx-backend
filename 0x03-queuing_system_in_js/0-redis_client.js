@@ -9,6 +9,8 @@ async function redisConnect() {
     console.log(`Redis client not connected to the server: ${err}`);
   });
 
+
+
 };
 
 redisConnect();
